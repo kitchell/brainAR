@@ -1,4 +1,11 @@
-init()
+var scene = document.querySelector('a-scene');
+
+if (scene.hasLoaded) {
+    init()
+} else{
+    scene.addEventListener('loaded', init);
+}
+
 
 function init() {
         
