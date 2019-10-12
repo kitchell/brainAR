@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BrainAR</title>
+      <!-- include A-Frame -->
+      <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+      <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v5.1.0/dist/aframe-extras.min.js"></script>
+      <!-- include ar.js for A-Frame -->
+      <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.0/aframe/build/aframe-ar.js"></script>
+    </head> 
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs>
+       <a-assets timeout="40000">
+
+            <a-asset-item id="brainmodel" src="assets/scene.gltf"></a-asset-item>
+           
+        </a-assets>
+    <a-marker type="pattern" preset="custom" url="assets/pattern-brain.patt" >
+     
+    <!-- create your content here. just a box for now -->
+<!--    <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>-->
+        <a-entity id="brain" gltf-model="#brainmodel" rotation="0 0 0" position="0 0 0" scale="1 1 1"></a-entity>
+      
+        </a-marker>
+
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>
+    
