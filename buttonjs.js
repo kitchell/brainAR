@@ -1,11 +1,17 @@
+init()
+
 function init() {
         
-document.querySelector('#left').addEventListener('click', function(event) {
     var brainEl = document.querySelector('#brain');
     console.log(brainEl)
-   brainEl.object3D.rotation.y = THREE.Math.degToRad(-90);
-   brainEl.object3D.rotation.x = THREE.Math.degToRad(-90);
+    
+    document.querySelector('#left').addEventListener('click', leftView);
 
-   console.log('left button clicked');
-})
+    function leftView(event) {
+
+       brainEl.object3D.rotation.y = THREE.Math.degToRad(-90);
+       brainEl.object3D.rotation.x = THREE.Math.degToRad(-90);
+
+       console.log('left button clicked');
+    }
 }
