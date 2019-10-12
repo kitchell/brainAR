@@ -1,6 +1,6 @@
 function init() {
         
-document.querySelector('#left').addEventListener('click', function() {
+document.querySelector('#left').addEventListener('click', function(event) {
     var brainEl = document.querySelector('#brain');
     console.log(brainEl)
    brainEl.object3D.rotation.y = THREE.Math.degToRad(-90);
