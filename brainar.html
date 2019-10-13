@@ -10,6 +10,8 @@
       <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.0/aframe/build/aframe-ar.js"></script>
 <!--      Javascript    -->
       <script src="buttonjs.js"></script>
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
     </head> 
 <body style='margin : 0px; overflow: hidden;'>
   <a-scene embedded arjs run>
@@ -31,8 +33,14 @@
     
       
   </a-scene>
-    <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
-        <button id="left" type='button'>Left View</button>
+    <div class="fixed-bottom" style='text-align: center; z-index: 1; bottom:10px'>
+        <button id="left" type='button' class="btn btn-primary btn-sm">Left</button>
+        <button id="front" type='button' class="btn btn-primary btn-sm">Anterior</button>
+        <button id="right" type='button' class="btn btn-primary btn-sm">Right</button>
+        <button id="back" type='button' class="btn btn-primary btn-sm">Posterior</button>
+        <button id="top" type='button' class="btn btn-primary btn-sm">Superior</button>
+        <button id="bottom" type='button' class="btn btn-primary btn-sm">Inferior</button>
+            
 </div>
      
 </body>
