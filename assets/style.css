@@ -7,6 +7,13 @@ a {
 }
 
 .ar {
-    width:70%;
+    width:50%;
     height: auto;
+}
+
+.screenshot {
+    float:left;
+    width:50%;
+    height:auto;
+    padding:5px;
 }
